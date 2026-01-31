@@ -1,5 +1,4 @@
 name: Docker Publish
-
 on:
   push:
     branches:
@@ -10,6 +9,7 @@ permissions:
   packages: write
 
 jobs:
+
   build-and-push:
     runs-on: ubuntu-latest
     steps:
