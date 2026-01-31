@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Log in to the Container registry
+      - name: log in to the container registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push Docker image
+      - name: build and push docker image
         run: |
           docker build . --tag ghcr.io/yousiftriki/skills-publish-docker-images1/stackoverflown:main
           docker push ghcr.io/yousiftriki/skills-publish-docker-images1/stackoverflown:main
